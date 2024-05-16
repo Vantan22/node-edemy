@@ -9,7 +9,7 @@ const shopRouter = require("./routers/shop");
 const rootDir = require("./util/path");
 
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(express.static(path.join(rootDir, "public")));
 app.use("/admin", adminRouter);
 app.use(shopRouter);
 
